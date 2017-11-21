@@ -9,6 +9,7 @@ import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -48,8 +49,11 @@ public class Controller implements Initializable {
 			AnchorPane page = (AnchorPane) loader.load();
 			Stage sendStage = new Stage();
 			sendStage.setTitle("Main Menu");
-			sendStage.setMaximized(true);
+			Scene scene=new Scene(page);
+			sendStage.setScene(scene);
+//			sendStage.setMaximized(true);
 			sendStage.show();
+			System.out.println("second stage ok");
 
 		} catch (IOException e) {
 			e.printStackTrace();
