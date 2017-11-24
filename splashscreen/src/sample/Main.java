@@ -7,6 +7,12 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+/**
+ * 
+ * @author ernesto
+ *
+ */
+
 public class Main extends Application {
 
     Stage stage;
