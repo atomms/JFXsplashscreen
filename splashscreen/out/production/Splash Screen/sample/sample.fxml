@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.*?>
-<?import javafx.scene.text.*?>
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.control.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.control.Button?>
+<?import com.jfoenix.controls.JFXSpinner?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="712.0" style="-fx-background-color: #00a75f;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="712.0" style="-fx-background-color: #00a75f;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Label fx:id="logoLabel" alignment="CENTER" layoutX="312.0" layoutY="116.0" prefHeight="88.0" prefWidth="89.0" style="-fx-background-color: #fff; -fx-background-radius: 50px;" text="M" textFill="#00a75f">
+      <Label fx:id="logoLabel" alignment="CENTER" layoutX="310.0" layoutY="116.0" prefHeight="88.0" prefWidth="89.0" style="-fx-background-color: #fff; -fx-background-radius: 50px;" text="M" textFill="#00a75f">
          <font>
             <Font name="Microsoft JhengHei UI Light" size="39.0" />
          </font>
       </Label>
-      <Label fx:id="nameLabel" layoutX="305.0" layoutY="210.0" text="APP NAME" textFill="WHITE" visible="false">
+      <Label fx:id="nameLabel" layoutX="300.0" layoutY="210.0" text="MOTOWN" textFill="WHITE" visible="false">
          <font>
             <Font name="Bauhaus 93" size="23.0" />
          </font>
