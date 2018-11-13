@@ -18,9 +18,9 @@ public class Main extends Application {
     Stage stage;
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage myStage) throws Exception{
 
-        this.stage=primaryStage;
+        stage=myStage;
 
         MainWindow();
 
@@ -32,8 +32,8 @@ public class Main extends Application {
 
         	FXMLLoader loader=new FXMLLoader(getClass().getResource("sample.fxml"));
             AnchorPane pane=loader.load();
-            Controller controller=loader.getController();
-            controller.main(stage,this);
+            Controller myc=loader.getController();
+            myc.main(stage,this);
             Scene scene=new Scene(pane);
             stage.initStyle(StageStyle.UNDECORATED);
             stage.setScene(scene);

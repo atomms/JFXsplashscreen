@@ -1,14 +1,11 @@
 package sample;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
 import javafx.animation.FadeTransition;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
@@ -16,22 +13,22 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-public class Controller implements Initializable {
+public class Controller {
 
 	@FXML
-	private Label logoLabel;
+	Label logoLabel ;
 
 	@FXML
-	private Pane spinnerPane;
+	Pane spinnerPane;
 
 	@FXML
-	private AnchorPane rootPane;
+	AnchorPane rootPane;
 
 	@FXML
-	private Label helloLabel;
+	Label helloLabel;
 
 	@FXML
-	private Label nameLabel;
+	Label nameLabel;
 
 	Main main;
 	Stage stage;
@@ -41,48 +38,52 @@ public class Controller implements Initializable {
 		this.stage = stage;
 	}
 
-	public void showMenu() {
+	public void showHome() {
 		try {
 			// Load the fxml file and create a new stage for the popup.
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class.getResource("menu.fxml"));
 			AnchorPane page = (AnchorPane) loader.load();
-			Stage sendStage = new Stage();
-			sendStage.setTitle("Main Menu");
+			Stage homeStage = new Stage();
+			homeStage.setTitle("Main Menu");
 			Scene scene=new Scene(page);
-			sendStage.setScene(scene);
-//			sendStage.setMaximized(true);
-			sendStage.show();
+			homeStage.setScene(scene);
+			homeStage.setMaximized(true);
+			homeStage.show();
 			System.out.println("second stage ok");
 
 		} catch (IOException e) {
 			e.printStackTrace();
+			System.out.println("second stage ko");
 		}
 	}
 
-	@Override
-	public void initialize(URL location, ResourceBundle resources) {
+
+	public void initialize() {
 
 		TranslateTransition translateTransition = new TranslateTransition(
-				Duration.seconds(0.5), logoLabel);
+				Duration.seconds(0.1), logoLabel);
 		translateTransition.setByY(700);
 		translateTransition.play();
 
 		TranslateTransition translateTransition0 = new TranslateTransition(
-				Duration.seconds(0.5), nameLabel);
+				Duration.seconds(0.1), nameLabel);
 		translateTransition0.setByY(700);
 		translateTransition0.play();
 
 		TranslateTransition translateTransition00 = new TranslateTransition(
-				Duration.seconds(0.5), helloLabel);
+				Duration.seconds(0.1), helloLabel);
 		translateTransition00.setByY(700);
 		translateTransition00.play();
 
 		translateTransition
 				.setOnFinished(event -> {
+					
+					
 					TranslateTransition translateTransition1 = new TranslateTransition(
 							Duration.seconds(1), logoLabel);
 					translateTransition1.setByY(-700);
+					
 					translateTransition1.play();
 
 					translateTransition1.setOnFinished(event1 -> {
@@ -121,7 +122,7 @@ public class Controller implements Initializable {
 
 									fadeTransition1.setOnFinished(event5 -> {
 										main.closeStage();
-										showMenu();
+										showHome();
 										System.out
 												.println("------- splash screen is closed --------");
 									});
@@ -136,4 +137,5 @@ public class Controller implements Initializable {
 				});
 
 	}
+	
 }

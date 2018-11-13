@@ -3,7 +3,10 @@
 <?import com.jfoenix.controls.JFXSpinner?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="712.0" style="-fx-background-color: #00a75f;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
@@ -23,15 +26,27 @@
             <Font name="Microsoft YaHei UI Light" size="12.0" />
          </font>
       </Label>
-      <Pane fx:id="spinnerPane" layoutX="256.0" layoutY="278.0" prefHeight="200.0" prefWidth="200.0" visible="false">
+      <GridPane layoutX="256.0" layoutY="278.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
          <children>
-            <JFXSpinner layoutX="66.0" layoutY="32.0" radius="30.0" />
-            <Label layoutX="50.0" layoutY="114.0" prefHeight="38.0" prefWidth="114.0" text="WAIT A FEW SECONDS" textAlignment="CENTER" textFill="WHITE" wrapText="true">
-               <font>
-                  <Font name="Microsoft JhengHei Light" size="10.0" />
-               </font>
-            </Label>
+            <VBox fx:id="spinnerPane" alignment="CENTER" opacity="0.0" visible="false" GridPane.columnIndex="1">
+               <children>
+                  <JFXSpinner radius="30.0" />
+                  <Label prefHeight="38.0" prefWidth="114.0" text="WAIT A FEW SECONDS" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="10.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
          </children>
-      </Pane>
+      </GridPane>
    </children>
 </AnchorPane>
