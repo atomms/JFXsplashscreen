@@ -1,0 +1,37 @@
+.namelabel{
+-fx-text-fill: #555555;
+    -fx-font-family: "HipsterishFontNormal";
+-fx-font-size: 16.0;
+}
+
+.logo{
+-fx-text-fill: green;
+-fx-background-radius: 50;
+-fx-background-color: white;
+    -fx-font-family: "HipsterishFontNormal";
+-fx-font-size: 50.0;
+}
+
+.backimg{
+    -fx-background-image: url("../view/blueforest.jpg");
+}
+
+.mytitle{
+    -fx-font-family: "HipsterishFontNormal";
+    /*-fx-font-family: "Shadows Into Light";*/
+    -fx-font-size: 50.0;
+    
+}
+
+.mybutton{
+
+	-fx-border-color: orange;
+	-fx-text-fill: white;
+	-fx-background-image: url("../view/send.png");
+}
+
+.mybutton:hover{
+	-fx-background-color: red;
+	-fx-border-color: red;
+	-fx-text-fill: white; 
+}

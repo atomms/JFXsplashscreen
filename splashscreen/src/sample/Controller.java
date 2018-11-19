@@ -107,7 +107,7 @@ public class Controller {
 								spinnerPane.setVisible(true);
 
 								FadeTransition fadeTransition = new FadeTransition(
-										Duration.seconds(1), spinnerPane);
+										Duration.seconds(3), spinnerPane);
 								fadeTransition.setFromValue(0);
 								fadeTransition.setToValue(1);
 								fadeTransition.play();
@@ -115,7 +115,7 @@ public class Controller {
 								fadeTransition.setOnFinished(event4 -> {
 
 									FadeTransition fadeTransition1 = new FadeTransition(
-											Duration.seconds(1), rootPane);
+											Duration.seconds(2), rootPane);
 									fadeTransition1.setFromValue(1);
 									fadeTransition1.setToValue(0.1);
 									fadeTransition1.play();
