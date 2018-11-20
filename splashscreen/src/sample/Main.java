@@ -1,9 +1,12 @@
 package sample;
 
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -15,42 +18,56 @@ import javafx.stage.StageStyle;
 
 public class Main extends Application {
 
-    Stage stage;
+	Stage stage;
 
-    @Override
-    public void start(Stage myStage) throws Exception{
+	@FXML
+	Label logoLabel;
 
-        stage=myStage;
+	@Override
+	public void start(Stage myStage) throws Exception {
 
-        MainWindow();
+		stage = myStage;
 
-    }
+		MainWindow();
 
-    private void MainWindow() {
+	}
 
-        try {
+	private void MainWindow() {
 
-        	FXMLLoader loader=new FXMLLoader(getClass().getResource("sample.fxml"));
-            AnchorPane pane=loader.load();
-            Controller myc=loader.getController();
-            myc.main(stage,this);
-            Scene scene=new Scene(pane);
-            stage.initStyle(StageStyle.UNDECORATED);
-            stage.setScene(scene);
-            stage.show();
+		try {
 
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+			FXMLLoader loader = new FXMLLoader(getClass().getResource(
+					"sample.fxml"));
+			AnchorPane pane = loader.load();
+			// Controller myc=loader.getController();
+			// myc.main(stage,this);
 
-    }
+			Scene scene = new Scene(pane);
 
-    public void closeStage(){
-        stage.close();
-    }
+			// adding Google fonts
+			scene.getStylesheets().add(
+					"https://fonts.googleapis.com/css?family=Dokdo");
 
+			// adding Custom fonts
+			Font.loadFont(
+					getClass().getResourceAsStream(
+							"assets/Sacramento-Regular.ttf"), 20);
 
-    public static void main(String[] args) {
-        launch(args);
-    }
+			stage.initStyle(StageStyle.UNDECORATED);
+			stage.setScene(scene);
+			stage.show();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	public void closeStage() {
+		stage.close();
+	}
+
+	public static void main(String[] args) {
+		launch(args);
+	}
 }

@@ -20,9 +20,9 @@
             </AnchorPane>
          </top>
          <center>
-            <Label text="YOU'RE IN!!" textFill="#000000d4" BorderPane.alignment="CENTER">
+            <Label text="YOU'RE IN :)" textFill="#000000d4" BorderPane.alignment="CENTER">
                <font>
-                  <Font size="39.0" />
+                  <Font size="24.0" />
                </font>
             </Label>
          </center>

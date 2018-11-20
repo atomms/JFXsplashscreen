@@ -30,13 +30,13 @@ public class Controller {
 	@FXML
 	Label nameLabel;
 
-	Main main;
-	Stage stage;
-
-	public void main(Stage stage, Main main) {
-		this.main = main;
-		this.stage = stage;
-	}
+//	Main main;
+//	Stage stage;
+//
+//	public void main(Stage stage, Main main) {
+//		this.main = main;
+//		this.stage = stage;
+//	}
 
 	public void showHome() {
 		try {
@@ -121,7 +121,9 @@ public class Controller {
 									fadeTransition1.play();
 
 									fadeTransition1.setOnFinished(event5 -> {
-										main.closeStage();
+//										main.closeStage();
+							    	    Stage thisStage = (Stage) rootPane.getScene().getWindow();
+							    	    thisStage.close();
 										showHome();
 										System.out
 												.println("------- splash screen is closed --------");
