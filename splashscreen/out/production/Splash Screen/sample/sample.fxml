@@ -28,12 +28,12 @@
                         <Font name="Microsoft JhengHei UI Light" size="39.0" />
                      </font>
                   </Label>
-                  <Label fx:id="nameLabel" styleClass="mytitle" text="MOTOWN" textFill="WHITE" visible="false">
+                  <Label fx:id="nameLabel" styleClass="mytitle" text="MOTOWN" textFill="WHITE">
                      <font>
                         <Font name="Bauhaus 93" size="23.0" />
                      </font>
                   </Label>
-                  <Label fx:id="helloLabel" prefHeight="38.0" prefWidth="172.0" text="HELLO THERE! , WELCOME TO MY APPLICATION" textAlignment="CENTER" textFill="WHITE" visible="false" wrapText="true">
+                  <Label fx:id="helloLabel" prefHeight="38.0" prefWidth="172.0" text="HELLO THERE! , WELCOME TO MY APPLICATION" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                      <font>
                         <Font name="Microsoft YaHei UI Light" size="12.0" />
                      </font>
@@ -52,7 +52,7 @@
             <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <VBox fx:id="spinnerPane" alignment="CENTER" opacity="0.0" visible="false" GridPane.columnIndex="1">
+            <VBox fx:id="spinnerPane" alignment="CENTER" opacity="0.0" GridPane.columnIndex="1">
                <children>
                   <JFXSpinner radius="30.0" />
                   <Label prefHeight="38.0" prefWidth="114.0" text="WAIT A FEW SECONDS" textAlignment="CENTER" textFill="WHITE" wrapText="true">
