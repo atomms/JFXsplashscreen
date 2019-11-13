@@ -42,7 +42,7 @@ public class Controller {
 		try {
 			// Load the fxml file and create a new stage for the popup.
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Main.class.getResource("menu.fxml"));
+			loader.setLocation(Main.class.getResource("sample2.fxml"));
 			AnchorPane page = (AnchorPane) loader.load();
 			Stage homeStage = new Stage();
 			homeStage.setTitle("Main Menu");
@@ -60,7 +60,7 @@ public class Controller {
 
 
 	public void initialize() {
-
+	
 		TranslateTransition translateTransition = new TranslateTransition(
 				Duration.seconds(0.1), logoLabel);
 		translateTransition.setByY(700);
@@ -79,7 +79,6 @@ public class Controller {
 		translateTransition
 				.setOnFinished(event -> {
 					
-					
 					TranslateTransition translateTransition1 = new TranslateTransition(
 							Duration.seconds(1), logoLabel);
 					translateTransition1.setByY(-700);
@@ -88,7 +87,6 @@ public class Controller {
 
 					translateTransition1.setOnFinished(event1 -> {
 
-						nameLabel.setVisible(true);
 
 						TranslateTransition translateTransition11 = new TranslateTransition(
 								Duration.seconds(1), nameLabel);
@@ -97,13 +95,14 @@ public class Controller {
 
 						translateTransition11.setOnFinished(event2 -> {
 
-							helloLabel.setVisible(true);
+					
 							TranslateTransition translateTransition111 = new TranslateTransition(
 									Duration.seconds(1), helloLabel);
 							translateTransition111.setByY(-700);
 							translateTransition111.play();
 
 							translateTransition111.setOnFinished(event3 -> {
+								
 								spinnerPane.setVisible(true);
 
 								FadeTransition fadeTransition = new FadeTransition(
