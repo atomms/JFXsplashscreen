@@ -38,6 +38,7 @@ public class Controller {
 //		this.stage = stage;
 //	}
 
+	@FXML
 	public void showHome() {
 		try {
 			// Load the fxml file and create a new stage for the popup.
